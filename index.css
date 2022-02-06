@@ -1,0 +1,56 @@
+/* ESTILOS GLOBALES */
+html {
+  /*Configuración para usar las cajas*/
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,/*Se eliminan configuraciones por defecto del navegador*/
+    *:before,
+    *:after {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: inherit;
+}
+
+body {
+  /*Estilos del cuerpo principal*/
+  background-color: #ffeddb; /*Color de fondo*/
+  color: #FFEDDB; /* #FFF9F9 Color de las fuentes*/
+  display: grid; /*Grilla de filas para el header, main y footer*/
+  min-height: 100%;
+
+  /*Creamos un template-area para el maquetado general del sitio
+    Diseño Mobile-First*/
+  grid-template:
+    "header navbar" 80px
+    "main   main" 1fr
+    "footer footer" auto / 1fr .8fr;
+}
+
+a {
+  /*A los links se le quitan el subrayado*/
+  text-decoration: none;
+  color: white;
+}
+
+/* Diseño para tabletas */
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  body {
+    grid-template:
+      "header header" 80px
+      "navbar   main" 1fr
+      "navbar footer" auto / 170px 1fr;
+  }
+}
+
+/* Diseño para pc, laptops */
+@media screen and (min-width: 1025px){
+  body {
+    grid-template:
+      "header navbar" 80px
+      "main   main" 1fr
+      "footer footer" auto / 1fr .8fr;
+  }
+}

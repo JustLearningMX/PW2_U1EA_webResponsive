@@ -1,0 +1,95 @@
+.header{
+    grid-area: header;
+    background-color: #BF9270;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 80px;
+    width: 60%;
+}
+
+.title{
+    font-size: 2.3rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    line-height: 80px;    
+}
+
+.title1{
+    color: #ECC488;
+    line-height: 80px;
+}
+
+.title2{
+    color: #F76E11;
+    font-size: 2.5rem;
+    line-height: 80px;
+}
+
+.iconoEmpresaContainer{
+    display: none;
+}
+
+.iconoEmpresa{
+    display: none;
+}
+
+/* Diseño para tabletas y pc-laptops*/
+@media screen and (min-width: 600px) /*and (max-width: 1024px)*/ {
+    .header{
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .title{
+        font-size: 3.2rem;
+    }
+
+    .title2{
+        color: #F76E11;
+        font-size: 3.5rem;
+    }
+
+    .iconoEmpresaContainer{
+        /* background-color: aqua; */
+        margin: 0 3.5rem 0 4.2rem;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        width: 80px;
+        height: 80px;
+    }
+
+    .imgIconoEmpresa{
+        /* background-color: #fff; */
+        width: 70%;
+        height: 90%;
+        object-fit: scale-down;
+    }
+}
+
+/* Diseño para pc, laptops */
+@media screen and (min-width: 1025px){
+    .header{
+        /* background-color: aqua; */
+        width: 40%;
+        justify-content: flex-end;
+        padding-right: 2rem;
+    }    
+
+    .title1{
+        font-size: 3rem;
+        padding-left: 10px;
+    }
+
+    .title2{
+        font-size: 3.4rem;
+    }
+
+    .iconoEmpresaContainer{
+        margin: 0 .5rem 0 4.2rem;
+    }
+}

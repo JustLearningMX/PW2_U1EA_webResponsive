@@ -1,0 +1,76 @@
+.footer{
+    grid-area: footer;
+    background: #BF9270;
+    display: grid;
+    grid-template:
+    "areaDireccion"     auto
+    "areaRedesSociales" auto
+    "areaDerechos"      auto;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    font-size: .8rem;
+}
+
+.areaDireccion{
+    grid-area: areaDireccion;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1.2rem;
+}
+
+.iconAddress{
+    width: 55px;
+    padding-right: 1rem;
+}
+
+.areaRedesSociales{
+    grid-area: areaRedesSociales;    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1.2rem;
+    padding-top: 0;
+}
+
+.areaRedesSociales > p{
+    padding-bottom: .3rem;
+}
+
+.imagenesIconos{
+    width: 55px;
+    padding: .6rem .5rem;
+}
+
+.iconosContactanos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: .8rem;
+}
+
+.iconosContactanos > img {
+    width: 45px;
+}
+
+.areaDerechos{
+    grid-area: areaDerechos;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+
+.contenedorDatosAlumno{
+    padding-top: 2rem;
+    font-size: .7rem;
+}
+
+/* Diseño para pc-laptops */
+@media screen and (min-width: 1025px) {
+    .footer{
+        grid-template:
+        "areaDireccion areaRedesSociales areaDerechos" auto / .3fr 1fr .5fr;
+        padding: 2rem;
+    }
+}

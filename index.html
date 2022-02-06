@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pan Dulce: Panadería Artesanal</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/footer.css">
+
+    <script defer src="./js/menu.js"></script>
+</head>
+<body>
+    <!-- Nombre de la tienda -->
+    <header class="header"> 
+        <!-- Icono de la empresa -->        
+        <div class="iconoEmpresaContainer">
+            <img class="imgIconoEmpresa" src="./imgs/iconoPan.png" alt="icono-usuario">
+        </div>
+
+        <span class="title1 title">pan</span>
+        <span class="title2 title">dulce</span>
+    </header>
+
+    <!-- Menú de navegación -->
+    <nav class="navbar">
+        <!-- Boton tipo hamburguesa -->
+        <input type="checkbox" id="menuInput">
+        <label class="menuLabel" for="menuInput">
+            <img class="imgBotonHam" src="./imgs/menuHamIcon.png" alt="menu-principal">
+            <!-- ☰  -->
+        </label>
+
+        <ul class="menu">
+            <li id="menu-items" class="selected"><a href="#inicio" class="nav-link"> Inicio </a></li>
+            <li id="menu-items"><a href="#" class="nav-link"> Servicios </a></li>
+            <li id="menu-items"><a href="#" class="nav-link"> Galería </a></li>
+            <li id="menu-items"><a href="#" class="nav-link"> Promos </a></li>
+            <li id="menu-items"><a href="#contacto" class="nav-link"> Contacto </a></li>
+        </ul>        
+
+        <!-- Icono para usuarios -->        
+        <div class="imgUserContainer">
+            <img class="imgBotonUser" src="./imgs/iconUser.png" alt="icono-usuario">
+        </div>
+
+    </nav>
+
+    <main id="inicio" class="main">
+        <section class="areaLogo">
+            <img class="imagenLogo" src="./imgs/panDulce2.jpg" alt="logo-pandulce">
+        </section>
+        <section class="areaInfo">
+            <article class="infoPanaderia">
+                
+                <p class="parrafoSomos"> 
+                    Somos una panadería que elabora sus productos panificados en forma artesanal, 
+                    cuidando que todos nuestros insumos sean de la mejor calidad e implementando 
+                    las mejores prácticas de higiene. Todos nuestros panes son premium en sabor y calidad.
+                </p>
+                <img class="panArtesanalImg" src="./imgs/panaderiaArtesanal.png" alt="que-es-pan-artesanal">
+                <p class="parrafoQueEsPanArtesanal"> 
+                    La panadería artesanal se basa en el respeto por las características y la integridad 
+                    de las masas pre-fermentadas y/o masa madre, así como al uso de fermentación prolongada. 
+                    Mediante este proceso se consiguen panes con ingredientes más naturales y de intenso sabor y olor.
+                </p>
+            </article>
+        </section>
+
+        <section class="areaImagenes">
+            <img class="imagenDePan" src="./imgs/pan2.jpg" alt="imagen1-pan">
+        </section>
+    </main>
+
+    <footer id="contacto" class="footer">
+        <section class="areaDireccion">
+            <img class="iconAddress" src="./imgs/iconAddress.png" alt="icono-direccion">
+            <div>
+                <p> Avenida siempre viva #123 </p>
+                <p> Colonia del pueblo. </p>
+                <p> Tampico, Tamaulipas. </p>
+                <p> Tel. 833 123 44 55 </p>                            
+            </div>            
+        </section>        
+        <section class="areaRedesSociales">
+            <p> Síguenos en: </p>
+            <div class="iconosContenedor">
+                <img src="./imgs/iconFacebook.png" alt="icono-facebook" class="imagenesIconos">
+                <img src="./imgs/iconTwitter.png" alt="icono-twitter" class="imagenesIconos">
+                <img src="./imgs/iconInstagram.png" alt="icono-instagram" class="imagenesIconos">            
+                <img src="./imgs/iconWhatsapp.png" alt="icono-whatsapp" class="imagenesIconos">
+            </div>
+            <!-- <p> Contáctanos: </p> -->
+            <div class="iconosContactanos">
+                <img src="./imgs/iconEmail.png" alt="icono-email" class="imagenesIconos"> contacto@pandulce.com.mx
+            </div>
+        </section>
+        <section class="areaDerechos">
+            <p>
+                © 2022 pandulce. Todos los derechos reservados.
+            </p>
+            <div class="contenedorDatosAlumno">
+                <p> Alumno: Hiram Chávez López </p>
+                <p> Materia: Programación Web 2. </p>
+                <p> UNADM. </p>
+                <p> Profesor: Fernando Viscarra </p>                            
+                <p> Febrero 2022 </p> 
+            </div>
+        </section>
+    </footer>
+</body>
+</html>
+<!--UNAdM. Desarrollo de Software
+    Materia: Programación Web 2
+    Unidad: 1. Evidencia de aprendizaje.
+    Alumno: Hiram Chávez López
+    Matrícula: ES1821000366.
+-->

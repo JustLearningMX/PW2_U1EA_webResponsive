@@ -1,0 +1,182 @@
+.navbar{/* Menú fijo en la parte superior */
+    grid-area: navbar;
+    background-color: #BF9270;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 60%;
+    height: 80px;
+    width: 40%;
+}
+
+.menu{
+    list-style: none;
+    display: flex;
+    align-items: center; /*Centra opcion del menú horizontalmente*/
+    flex-direction: column; /*Los acomoda uno debajo del otro*/
+    margin: 0;
+    background-color: #BF9270;
+    position: fixed;
+    top: 80px; /*De acuerdo al alto del elemento anterior*/
+    left: 100%;/*Opciones de menú fuera de pantalla*/
+    transition: left 0.3s;
+    width: 100%; /*Que ocupe todo el ancho*/
+    height: calc(100% - 80px); /*Ajusta el menú a la altura restante de la pantalla*/
+    padding: 20px 0;
+    overflow-y: auto; /*Agrega scroll x si la pantalla supera el contenido*/
+}
+
+#menu-items {
+    margin: 0 18px;    
+    line-height: 70px;
+    width: max-content;
+}
+
+.nav-link {
+  color: #FFF9F9;
+  font-size: 1.3rem;
+  padding: 8px 12px;
+  border-radius: 3px;
+}
+
+.nav-link:hover,
+.menu li.selected a {
+    color: #E3B7A0;
+    transition: 0.5s;
+}
+
+.nav-menu_visible{/*Opciones del menú se muestran a la izquierda*/
+  left: 0;
+}
+
+#menuInput{ 
+    display: none;
+    cursor: pointer;
+}
+
+.menuLabel { /* nav-toggle */
+    box-sizing: border-box;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-weight: bold;
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+}
+
+.imgBotonUser{
+    width: 30px;
+}
+
+/* Diseño para tabletas */
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+    .navbar{ /* Menú fijo a la izquierda */
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        top: 80px;
+        left: auto;
+        height: 100%;
+        width: 170px;
+    }
+
+    .menuLabel { /* Ocultamos menú de hamburguesa */
+        display: none;
+    }
+
+    .menu{ /* Mostramos opciones del menú */
+        align-items: flex-end;
+        top: 100px; /*De acuerdo al alto del elemento anterior*/
+        left: 0;/*Opciones de menú a la izquiers*/
+        width: 170px; /*Que ocupe su colimna*/
+        height: auto;
+    }
+
+    .nav-link {
+        font-size: 1.3rem;
+      }
+
+    #menu-items {
+        margin: 0 22px;    
+        line-height: 60px;
+    }
+
+    .imgUserContainer{
+        position: fixed;
+        top: 20px;
+        left: 80%;
+        display: flex;
+        align-items: center;
+    }
+
+    .imgBotonUser{
+        width: 40px;
+    }
+}
+
+/* Diseño para pc, laptops */
+@media screen and (min-width: 1025px){
+    .navbar{/* Menú fijo en la parte superior */
+        /* background-color: blue; */
+        left: 40%;
+        width: 60%;
+        justify-content: flex-start;
+    }    
+
+    .menuLabel { /* Ocultamos menú de hamburguesa */
+        display: none;
+    }
+
+    .menu{
+        /* background-color: brown; */
+        flex-direction: row; /* Los acomoda uno debajo del otro */        
+        justify-content: space-between;
+        position: relative;
+        top: 0; 
+        left: 0;
+        width: 75%;
+        height: 80px;
+        overflow-y:hidden;
+    }
+
+    #menu-items {
+        /* background-color: blueviolet; */
+        margin: 0;
+        padding: 0;
+        line-height: 80px;
+        /* width: 100%; */
+        height: 80px;
+    }
+
+    .imgBotonUser{
+        margin-left: 2rem;
+    }
+
+    .nav-link{
+        height:max-content;        
+    }
+
+    #menu-items:hover{
+        background-color: #E3B7A0;     
+        transition: 0.5s;
+        color: #FFEDDB;
+    }
+
+    .menu a:hover{
+        color: #FFEDDB;
+    }
+
+    .menu li.selected a {
+        color: #E3B7A0;
+    }
+
+    .nav-link:hover,
+    .menu li.selected a {
+        color: #EDCDBB;
+        transition: 0.5s;
+    }
+}

@@ -1,0 +1,109 @@
+.main{
+    grid-area: main;
+    background-color: #E3B7A0;
+    display: grid;
+    grid-template:
+    "areaLogo" auto
+    "areaInfo" 1fr
+    "areaImagenes" auto;
+}
+
+.areaLogo{
+    grid-area: areaLogo;
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px;
+}
+
+.imagenLogo{
+    padding: 1.3rem;
+    border-radius: 40%;
+    width: 60%;
+}
+
+.areaInfo{
+    grid-area: areaInfo;
+}
+
+.infoPanaderia{
+    padding: 2rem 1.2rem;
+    font-size: 1.3rem;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.parrafoSomos {
+    padding-bottom: 2.1rem;    
+}
+
+.panArtesanalImg{
+    max-width: 100%;
+    object-fit:scale-down;
+    padding-bottom: 1.1rem; 
+}
+
+.areaImagenes{
+    grid-area: areaImagenes;
+}
+
+.imagenDePan{
+    padding: 2rem 1.2rem;
+    max-width: 100%;
+    object-fit: cover;
+    padding-bottom: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+/* Diseño para tabletas */
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+    .areaLogo{
+        padding-top: 50px;
+    }
+    
+    .imagenLogo{
+        margin-top: 40px;
+        background-color: #BF9270;
+        padding: .5rem;
+        border-radius: 30%;
+        width: 50%;
+        object-fit: cover;
+    }
+}
+
+/* Diseño para pc-laptops */
+@media screen and (min-width: 1025px) {
+    .main{
+        grid-template:
+        "areaLogo areaInfo areaImagenes" auto / .3fr 1fr .5fr;
+    }
+
+    .areaLogo{
+        grid-area: areaLogo;
+        min-width: 100%;
+        display: flex;
+        align-items: flex-start;
+        padding-top: 90px;
+    }    
+
+    .imagenLogo{
+        background-color: #BF9270;
+        padding: .7rem;
+        border-radius: 30%;
+        width: 80%;
+    }
+
+    .areaInfo{
+        margin-top: 40px;
+    }
+    
+    .infoPanaderia{
+        padding: 3rem 1.2rem;
+    }
+
+    .areaImagenes{
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+    }
+}
